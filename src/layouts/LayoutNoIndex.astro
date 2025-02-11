@@ -1,0 +1,75 @@
+---
+import ScrollWatcher from '@/components/ScrollWatcher.astro'
+import Header from '@/components/Header.astro'
+import { ClientRouter } from 'astro:transitions'
+const { basic } = Astro.props
+---
+
+<html lang='en' class='bg-gray-900 scroll-smooth scroll-p-0 lg:scroll-p-14'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' href='/favicon.ico' type='image/x-icon' />
+    <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' />
+    <link rel='icon' href='/favicon-16x16.png' sizes='16x16' type='image/png' />
+    <link rel='icon' href='/favicon-32x32.png' sizes='32x32' type='image/png' />
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap'
+      rel='stylesheet'
+    />
+    <link
+      rel='icon'
+      href='/favicon-192x192.png'
+      sizes='192x192'
+      type='image/png'
+    />
+    <link rel='icon' href='/favicon.svg' type='image/svg+xml' />
+    <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
+    <meta property='og:title' content='Nico Masnovo' />
+    <meta
+      property='og:image'
+      content='https://www.nicomasnovo.com/android-chrome-512x512.png'
+    />
+    <!-- Manifest (para PWA) -->
+    <link rel='manifest' href='site.webmanifest' />
+    <meta name='generator' content={Astro.generator} />
+    <meta name='googlebot' content='noindex, nofollow' />
+    <meta name='bingbot' content='noindex, nofollow' />
+    <meta name='robots' content='noindex, nofollow' />
+    <title>Nico Masnovo</title>
+    <ClientRouter />
+  </head>
+  <body class='dark:bg-gray-900 antialiased font-nunito'>
+    {basic ? null : <ScrollWatcher />}
+    {basic ? null : <Header />}
+    <slot />
+    {
+      basic ? null : (
+        <footer class='text-center text-gray-400 '>
+          <ul class='p-10 max-w-3xl m-auto list-none gap-2 flex flex-col md:flex-row justify-center bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] to-gray-900 via-gray-900 from-[#161150] from-40% pb-24 md:pb-10'>
+            <li>Made with Astro, Tailwind</li>
+            <li>
+              ( love ♡ and lots of{' '}
+              <a href='/space' rel='nofollow'>
+                stars
+              </a>{' '}
+              ☆ )
+            </li>
+            <li class='hidden md:visible'>-</li>
+            <li>© 2024 Nico Masnovo</li>
+          </ul>
+        </footer>
+      )
+    }
+  </body>
+</html>
+
+<style>
+  canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+</style>

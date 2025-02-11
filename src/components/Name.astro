@@ -1,0 +1,223 @@
+---
+import { Image } from 'astro:assets'
+import mePic from '../assets/me-memoji.webp'
+const { pathname } = Astro.url
+---
+
+<div class='flex flex-col justify-start' id='name'>
+  <div class='flex flex-col-reverse md:flex-row md:items-end'>
+    <h1
+      class='pb-1 text-4xl md:text-7xl animated-background font-black bg-gradient-to-br from-[#ffff99] via-[#ff7758] to-[#f00f7c] inline-block text-transparent bg-clip-text font-sans relative z-20'
+    >
+      Hola! <br />
+      Soy Nico Masnovo
+    </h1>
+    <span
+      class='absolute blur-lg pb-1 text-4xl md:text-7xl animated-background font-black bg-gradient-to-br from-[#ffff99] via-[#ff7758] to-[#f00f7c] inline-block text-transparent bg-clip-text font-sans z-10 opacity-40'
+    >
+      Hola! <br />
+      Soy Nico Masnovo
+    </span>
+    <Image
+      src={mePic}
+      alt='Nico Masnovo'
+      class='w-32 h-32 md:h-48 md:w-48 zoomIn absolute top-[10px] left-[68px] md:top-[-5px] md:left-[190px] absolute rotate-[-10deg]'
+    />
+  </div>
+  <h2 class='text-2xl md:text-4xl font-bold md:font-semibold type h-3'>
+    <span></span>
+  </h2>
+</div>
+
+<script define:vars={{ pathname }}>
+  const strings = [
+    'Software Engineer',
+    'APIcultor',
+    'Technical Lead',
+    'Milanesas Evangelist',
+    'Fullstack Developer',
+    'Things Specialist',
+    'Software Engineer Manager',
+    'Programador',
+    'Nerd'
+  ]
+
+  const typingSpeed = 100
+  const pauseBetween = 1000
+  const displayElement = document.querySelector('.type span')
+
+  let stringIndex = 0
+  let charIndex = 0
+  let isDeleting = false
+
+  /**
+   * Types text with animation effect
+   * @returns {void}
+   */
+  const typeEffect = () => {
+    if (!displayElement) return
+    const currentString = strings[stringIndex]
+    let speed = isDeleting
+      ? calculateDeletingSpeed(charIndex, currentString.length)
+      : typingSpeed
+
+    if (!isDeleting) {
+      displayElement.textContent = currentString.slice(0, charIndex + 1)
+      charIndex++
+
+      if (charIndex === currentString.length) {
+        isDeleting = true
+        setTimeout(typeEffect, pauseBetween)
+        return
+      }
+    } else {
+      displayElement.textContent = currentString.slice(0, charIndex - 1)
+      charIndex--
+
+      if (charIndex === 0) {
+        isDeleting = false
+        stringIndex = (stringIndex + 1) % strings.length
+        displayElement.textContent = ''
+        setTimeout(typeEffect, pauseBetween)
+        return
+      }
+    }
+
+    setTimeout(typeEffect, speed)
+  }
+
+  /**
+   * Calculates the deleteing speed after typing
+   * @returns {void}
+   */
+  const calculateDeletingSpeed = (currentChar, totalChars) => {
+    const progress = 1 - currentChar / totalChars
+    return Math.max(30, progress * 100)
+  }
+
+  /**
+   * Init typing animation
+   * @returns {void}
+   */
+  const startAnimation = () => {
+    if (!document.querySelector('.type')) return
+    setTimeout(() => {
+      document.querySelector('.type').style.opacity = '1'
+    }, 1000)
+    setTimeout(typeEffect, 3000)
+  }
+
+  document.addEventListener('astro:page-load', (e) => {
+    if (pathname !== '/resources') {
+      startAnimation()
+    }
+  })
+</script>
+
+<style>
+  .animated-background {
+    background-size: 200%;
+
+    animation:
+      bg 3s ease infinite,
+      fall 2s ease 0s 1 normal forwards;
+  }
+  .type {
+    opacity: 0;
+    display: inline-block;
+    position: relative;
+    &::after {
+      content: '|';
+      animation: blink 1.5s steps(1) infinite;
+      color: white;
+      font-weight: bold;
+      margin-left: -5px;
+      margin-top: -3px;
+    }
+  }
+
+  .zoomIn {
+    opacity: 0;
+    animation: zoomIn 1.4s forwards;
+    animation-delay: 2s;
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes bg {
+    0%,
+    100% {
+      background-position: 0% 0%;
+    }
+
+    50% {
+      background-position: 100% 100%;
+    }
+  }
+
+  @keyframes fall {
+    0% {
+      animation-timing-function: ease-in;
+      opacity: 0;
+      transform: translateY(-250px);
+    }
+
+    38% {
+      animation-timing-function: ease-out;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    55% {
+      animation-timing-function: ease-in;
+      transform: translateY(-65px) rotate(2deg);
+    }
+
+    72% {
+      animation-timing-function: ease-out;
+      transform: translateY(0);
+    }
+
+    81% {
+      animation-timing-function: ease-in;
+      transform: translateY(-28px) rotate(-3deg);
+    }
+
+    90% {
+      animation-timing-function: ease-out;
+      transform: translateY(0);
+    }
+
+    95% {
+      animation-timing-function: ease-in;
+      transform: translateY(-8px);
+    }
+
+    100% {
+      animation-timing-function: ease-out;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes zoomIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.1);
+    }
+
+    50%,
+    100% {
+      opacity: 1;
+    }
+  }
+</style>

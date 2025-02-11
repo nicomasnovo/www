@@ -1,0 +1,24 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import Title from '@/components/Resources/Title.astro'
+---
+
+<Layout title='Resources' description='Resources for developers'>
+  <div class='flex h-dvh'>
+    <div
+      class='max-w-5xl mx-4 md:mx-auto pb-12 md:px-8 m-auto gap-4 flex flex-col'
+    >
+      <Title
+        title='Recommended Books'
+        skew='skew-x-6'
+        url='/resources/recommended-books'
+      />
+      <Title
+        title='CSS Cheat Sheets'
+        skew='skew-x-[-8deg]'
+        url='/resources/css-cheat-sheets'
+      />
+      <Title title='Usefull Links' skew='skew-x-12' url='/resources/links' />
+    </div>
+  </div>
+</Layout>

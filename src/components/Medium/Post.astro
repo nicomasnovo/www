@@ -1,0 +1,51 @@
+---
+import type { Post } from '@/services/getPosts'
+import type { ImageMetadata } from 'astro'
+import { Image } from 'astro:assets'
+
+type Props = Post
+
+const { title, date, tags, link, content, image } = Astro.props
+const imagePath = image ? `/src/assets/posts/${image.split('/').pop()}` : ''
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/posts/*.{jpeg,jpg,png,gif}'
+)
+if (!images[imagePath])
+  throw new Error(
+    `"${imagePath}" does not exist in glob: "src/assets/posts/*.{jpeg,jpg,png,gif}"`
+  )
+---
+
+<a href={link} target='_blank'>
+  <article
+    class='bg-slate-800 md:bg-transparent hover:text-white mb-8 p-4 rounded-2xl hover:shadow-lg container text-gray-200 md:grid md:grid-flow-col gap-4 hover:bg-slate-800 transition-all'
+  >
+    {
+      image && (
+        <Image
+          src={images[imagePath]()}
+          alt={title}
+          class='md:aspect-square object-cover overflow-hidden rounded-lg col-span-1 h-42 mb-4 md:m-auto md:h-auto object-top md:object-center'
+        />
+      )
+    }
+    <div class='col-span-2'>
+      <h2 class='text-xl font-bold mb-2'>
+        {title}
+      </h2>
+      <div class='text-gray-300 mb-2'>{date}</div>
+      <div class='text-gray-300 mb-2'>{content}</div>
+      {
+        tags && tags.length > 0 && (
+          <div class='flex flex-wrap gap-2'>
+            {tags.map((tag) => (
+              <span class='px-2 py-1 bg-gray-100 text-sm rounded-full text-gray-700'>
+                #{tag}
+              </span>
+            ))}
+          </div>
+        )
+      }
+    </div>
+  </article>
+</a>

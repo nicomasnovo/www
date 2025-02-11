@@ -1,0 +1,59 @@
+---
+import data from '@/data/books.json'
+import ImageDynamic from '@/components/ImageDynamic.astro'
+import BackBtn from '@/components/Resources/BackBtn.astro'
+---
+
+<section class='container mx-auto md:px-4 py-8'>
+  <div class='flex justify-between items-center md:mt-12 mb-6'>
+    <h2 class='text-3xl text-white relative w-fit px-3'>
+      <span class='z-20 relative text-blue-800'>Recommended Books</span>
+      <i
+        class='w-full skew-x-[-8deg] bg-[#ffec9f] h-full absolute left-0 top-0 z-10'
+      ></i>
+    </h2>
+    <BackBtn small />
+  </div>
+  {
+    data.categories.map((category) => (
+      <div class='mb-20'>
+        <h2 class='text-xl bg-blue-400 w-fit px-4 rounded-xl text-white mb-6 '>
+          {category.title}
+        </h2>
+        <div class='grid grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-6'>
+          {category.books.map((book) => {
+            return (
+              <div class='bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col'>
+                <ImageDynamic altText={book.title} imagePath={book.coverUrl} />
+
+                <div class='p-4 flex flex-col justify-between h-full'>
+                  <div>
+                    <h3 class='text-lg font-semibold text-white mb-2 line-clamp-2'>
+                      {book.title}
+                    </h3>
+                    <p class='text-gray-400 text-sm mb-4'>{book.author}</p>
+                  </div>
+                  <div>
+                    <p class='text-gray-400 text-sm mb-2'>
+                      ISBN: <br />
+                      {book.isbn}
+                    </p>
+                    <a
+                      href={`https://www.amazon.com/dp/${book.asin}`}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      class='flex bg-blue-800 hover:bg-blue-700 text-white justify-center text-sm px-2 md:px-4 py-2 rounded transition-colors duration-200 mt-auto'
+                    >
+                      Buy on Amazon
+                    </a>
+                  </div>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      </div>
+    ))
+  }
+  <BackBtn />
+</section>

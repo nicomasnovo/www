@@ -1,0 +1,17 @@
+---
+import ghContributions from '@/assets/gh_contributions.webp'
+import { Image } from 'astro:assets'
+---
+
+<div class='max-w-3xl mx-auto text-center mb-20 relative'>
+  <Image src={ghContributions} alt='My Gh Contributions' class='rounded-xl' />
+  <span
+    class='text-gray-400 absolute bottom-0 right-4 lg:bottom-2 lg:right-6 text-sm'
+    >made with <a
+      href='https://postspark.app/github-contributions'
+      target='_blank'
+      class='underline'>postspark.app</a
+    >
+    by <a href='https://x.com/world1dan' target='_blank'>@world1dan</a>
+  </span>
+</div>

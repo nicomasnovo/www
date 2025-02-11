@@ -1,0 +1,10 @@
+---
+import Tridi from '@/components/Tridi.astro'
+import Layout from '@/layouts/LayoutNoIndex.astro'
+---
+
+<Layout basic={true}>
+  <Tridi />
+  <canvas id='space' class='fixed top-0 left-0 z-0'></canvas>
+  <script src='../lib/threejs/stars.js'></script>
+</Layout>

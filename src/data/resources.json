@@ -1,0 +1,314 @@
+{
+    "categories": [
+        {
+            "title": "Influencers and Content Creators",
+            "links": [
+                {
+                    "name": "Midudev",
+                    "url": "https://midu.dev",
+                    "description": "Spanish content on JavaScript and modern web development."
+                },
+                {
+                    "name": "Gentleman Programming",
+                    "url": "https://www.youtube.com/@GentlemanProgramming",
+                    "description": "Spanish tutorials on development and best practices."
+                },
+                {
+                    "name": "Jack Herrington",
+                    "url": "https://www.youtube.com/@jherr",
+                    "description": "Tutorials on JavaScript, TypeScript, and advanced topics."
+                },
+                {
+                    "name": "Fernando Herrera",
+                    "url": "https://www.youtube.com/@fernando_her85",
+                    "description": "Spanish resources on web development and advanced programming topics."
+                },
+                {
+                    "name": "Dotdager",
+                    "url": "https://www.youtube.com/@dotdager",
+                    "description": "Technical content focused on JavaScript and modern frameworks."
+                },
+                {
+                    "name": "Tsoding",
+                    "url": "https://www.youtube.com/@tsoding",
+                    "description": "Live programming with a focus on algorithms and technical projects."
+                },
+                {
+                    "name": "HolaMundo (Nico Schurmann)",
+                    "url": "https://www.youtube.com/@HolaMundoDev",
+                    "description": "Spanish channel with tutorials on advanced web development."
+                },
+                {
+                    "name": "Fireship.io",
+                    "url": "https://fireship.io",
+                    "description": "Short and practical videos to learn modern technologies and web development."
+                }
+            ]
+        },
+        {
+            "title": "Resources for Learning and Guides",
+            "links": [
+                {
+                    "name": "Roadmap.sh",
+                    "url": "https://roadmap.sh",
+                    "description": "Interactive skill maps for various technical roles."
+                },
+                {
+                    "name": "FreeCodeCamp",
+                    "url": "https://www.freecodecamp.org",
+                    "description": "Free platform with hands-on exercises for web development."
+                },
+                {
+                    "name": "MDN Web Docs",
+                    "url": "https://developer.mozilla.org",
+                    "description": "Essential reference for HTML, CSS, JavaScript, and web standards."
+                },
+                {
+                    "name": "DevDocs.io",
+                    "url": "https://devdocs.io",
+                    "description": "Fast, accessible documentation for multiple technologies."
+                },
+                {
+                    "name": "Refactoring.guru",
+                    "url": "https://refactoring.guru",
+                    "description": "Guides on design patterns and refactoring techniques."
+                },
+                {
+                    "name": "Free-for.dev",
+                    "url": "https://free-for.dev",
+                    "description": "Collection of free developer services (APIs, databases, CI/CD, etc.)."
+                },
+                {
+                    "name": "Node.js Best Practices",
+                    "url": "https://github.com/goldbergyoni/nodebestpractices/blob/spanish-translation/README.spanish.md",
+                    "description": "Best practices for Node.js development (in Spanish)."
+                },
+                {
+                    "name": "Modern CSS",
+                    "url": "https://moderncss.dev/",
+                    "description": "Modern CSS Solutions for Old CSS Problems."
+                },
+                {
+                    "name": "CSS Grid Generator",
+                    "url": "https://cssgridgenerator.io/",
+                    "description": "Create custom CSS grid layouts more easily."
+                }
+            ]
+        },
+        {
+            "title": "Inspiration and Design",
+            "links": [
+                {
+                    "name": "Awwwards",
+                    "url": "https://awwwards.com",
+                    "description": "Awards for the best and most innovative web designs."
+                },
+                {
+                    "name": "Dribbble",
+                    "url": "https://dribbble.com",
+                    "description": "Visual inspiration for UI/UX design and graphics."
+                },
+                {
+                    "name": "Behance",
+                    "url": "https://behance.net",
+                    "description": "Portfolios in web design, graphic design, and branding."
+                },
+                {
+                    "name": "Hero Patterns",
+                    "url": "https://heropatterns.com",
+                    "description": "Customizable SVG patterns for backgrounds."
+                },
+                {
+                    "name": "Iconos8",
+                    "url": "https://iconos8.com/icons",
+                    "description": "A large collection of icons, illustrations, and photos."
+                },
+                {
+                    "name": "Tabler Icons",
+                    "url": "https://tabler-icons.io",
+                    "description": "Free and open-source icons for modern interfaces."
+                },
+                {
+                    "name": "Figma",
+                    "url": "https://figma.com",
+                    "description": "Collaborative tool for designing interfaces and prototypes."
+                },
+                {
+                    "name": "Google Fonts",
+                    "url": "https://fonts.google.com",
+                    "description": "Free and optimized fonts for the web."
+                }
+            ]
+        },
+        {
+            "title": "Testing and Technical Support",
+            "links": [
+                {
+                    "name": "Can I Use",
+                    "url": "https://caniuse.com",
+                    "description": "Compatibility checker for web features across browsers."
+                },
+                {
+                    "name": "BrowserStack",
+                    "url": "https://browserstack.com",
+                    "description": "Test websites on multiple devices and browsers."
+                },
+                {
+                    "name": "Lighthouse",
+                    "url": "https://developers.google.com/web/tools/lighthouse",
+                    "description": "Google's tool for performance, accessibility, and SEO audits."
+                },
+                {
+                    "name": "GTmetrix",
+                    "url": "https://gtmetrix.com",
+                    "description": "Analyze and optimize website loading speed."
+                },
+                {
+                    "name": "ChartDB.io",
+                    "url": "https://chartdb.io",
+                    "description": "Tool to create dynamic charts and dashboards."
+                }
+            ]
+        },
+        {
+            "title": "APIs and Utilities",
+            "links": [
+                {
+                    "name": "JSON Placeholder",
+                    "url": "https://jsonplaceholder.typicode.com",
+                    "description": "Free API for testing and prototyping front-end apps."
+                },
+                {
+                    "name": "RapidAPI",
+                    "url": "https://rapidapi.com",
+                    "description": "Marketplace with thousands of ready-to-use APIs."
+                },
+                {
+                    "name": "Postman",
+                    "url": "https://postman.com",
+                    "description": "Design, test, and document APIs with ease."
+                },
+                {
+                    "name": "Squoosh",
+                    "url": "https://squoosh.app",
+                    "description": "Compress images while optimizing quality for the web."
+                },
+                {
+                    "name": "PokeAPI",
+                    "url": "https://pokeapi.co",
+                    "description": "A free, open-source RESTful API for Pokémon data."
+                },
+                {
+                    "name": "OpenWeather API",
+                    "url": "https://openweathermap.org/api",
+                    "description": "Free API for weather data and forecasts."
+                },
+                {
+                    "name": "Cat Fact API",
+                    "url": "https://catfact.ninja",
+                    "description": "Get random cat facts from this free API."
+                },
+                {
+                    "name": "JSON Crack",
+                    "url": "https://jsoncrack.com/",
+                    "description": "Visualize JSON into interactive graphs."
+                },
+                {
+                    "name": "TheMealDB",
+                    "url": "https://www.themealdb.com/api.php",
+                    "description": "A free API for getting meal and recipe information."
+                },
+                {
+                    "name": "CoinDesk API",
+                    "url": "https://www.coindesk.com/coindesk-api/",
+                    "description": "Real-time cryptocurrency market data and prices."
+                },
+                {
+                    "name": "Docker Hub",
+                    "url": "https://hub.docker.com/",
+                    "description": "Docker images for all the things."
+                }
+            ]
+        },
+        {
+            "title": "Security Web",
+            "links": [
+                {
+                    "name": "SecurityHeaders",
+                    "url": "https://securityheaders.com",
+                    "description": "Scan your site's headers and get recommendations to improve them."
+                },
+                {
+                    "name": "OWASP",
+                    "url": "https://owasp.org",
+                    "description": "Resources to mitigate vulnerabilities (e.g., OWASP Top 10)."
+                },
+                {
+                    "name": "SSL Labs",
+                    "url": "https://ssllabs.com/ssltest/",
+                    "description": "Analyze SSL/TLS configurations on web servers."
+                },
+                {
+                    "name": "Mozilla Observatory",
+                    "url": "https://observatory.mozilla.org",
+                    "description": "Security analysis for your website configurations."
+                },
+                {
+                    "name": "CSP Evaluator",
+                    "url": "https://csp-evaluator.withgoogle.com",
+                    "description": "Review Content Security Policy (CSP) settings to prevent attacks."
+                },
+                {
+                    "name": "Have I Been Pwned",
+                    "url": "https://haveibeenpwned.com",
+                    "description": "Check if your accounts have been compromised in data breaches."
+                }
+            ]
+        },
+        {
+            "title": "Communities and Forums",
+            "links": [
+                {
+                    "name": "Stack Overflow",
+                    "url": "https://stackoverflow.com",
+                    "description": "Solve technical problems in web development."
+                },
+                {
+                    "name": "Dev.to",
+                    "url": "https://dev.to",
+                    "description": "Active community where developers share tutorials and resources."
+                },
+                {
+                    "name": "Hashnode",
+                    "url": "https://hashnode.com",
+                    "description": "Platform for writing and sharing technical blogs."
+                },
+                {
+                    "name": "Daily Dev",
+                    "url": "https://daily.dev/es",
+                    "description": "Where developers suffer together."
+                }
+            ]
+        },
+        {
+            "title": "Subreddits",
+            "links": [
+                {
+                    "name": "r/webdev",
+                    "url": "https://reddit.com/r/webdev",
+                    "description": "Discussions and resources on web development."
+                },
+                {
+                    "name": "r/frontend",
+                    "url": "https://reddit.com/r/frontend",
+                    "description": "Topics and resources on front-end development."
+                },
+                {
+                    "name": "r/javascript",
+                    "url": "https://reddit.com/r/javascript",
+                    "description": "Discussions on JavaScript and its ecosystem."
+                }
+            ]
+        }
+    ]
+}

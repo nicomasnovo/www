@@ -1,0 +1,17 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import BooksComponent from '@/components/Resources/Books.astro'
+---
+
+<Layout
+  title='Recommended Books'
+  description='Recommended books for developers'
+>
+  <div class='flex min-h-screen'>
+    <div
+      class='max-w-5xl mx-4 md:mx-auto pb-12 md:px-8 m-auto gap-4 flex flex-col'
+    >
+      <BooksComponent />
+    </div>
+  </div>
+</Layout>

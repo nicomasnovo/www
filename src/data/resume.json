@@ -1,0 +1,145 @@
+[
+  {
+    "company": "MACH (Banco BCI)",
+    "img": "/src/assets/companies/mach.jpg",
+    "country": "Chile 🇨🇱",
+    "positions": [
+      {
+        "title": "Sr. Software Engineer Manager Platform (Customer Success + Ops)",
+        "date": "mar. 2023 - actualidad",
+        "description": "Manager del equipo de Plataforma a cargo de los servicios y productos de Operaciones y Customer Success"
+      },
+      {
+        "title": "Sr. Software Engineer Manager (CS y Business)",
+        "date": "ago. 2022 - mar. 2023 · 8 meses",
+        "description": "Manager a cargo de los equipos de desarrollo para Atencional y Operacional<br>- Backoffice CS + Ops<br>- Chatbot<br>- Mach Pay (Business/Empresas)"
+      },
+      {
+        "title": "Sr. Software Engineer Manager Web",
+        "date": "mar. 2022 - ago. 2022 · 6 meses",
+        "description": "Manager del equipo Web en Mach"
+      }
+    ],
+    "current": true
+  },
+  {
+    "company": "Somos Cima Digital",
+    "img": "/src/assets/companies/somoscimadigital.jpg",
+    "country": "Argentina 🇦🇷",
+    "positions": [
+      {
+        "title": "Consultor de tecnología",
+        "date": "Sep. 2024 - actualidad"
+      }
+    ],
+    "current": true
+  },
+  {
+    "company": "Justo",
+    "date": "1 año 5 meses",
+    "img": "/src/assets/companies/justo.jpg",
+    "country": "Chile 🇨🇱",
+    "positions": [
+      {
+        "title": "Lead Software Engineer",
+        "date": "ene. 2022 - mar. 2022 · 3 meses",
+        "description": "Gestión con clientes en varios países: Chile, Perú, México, Costa Rica<br>- Desarrollo de Aplicaciónes Móviles para Food Delivery con React Native.<br>- Desarrollo de plataformas ecommerce enfocada en Delivery de productos de consumo.<br>- Desarrollo Backend - GraphQL"
+      },
+      {
+        "title": "Senior Software Engineer",
+        "date": "nov. 2020 - ene. 2022 · 1 año 3 meses"
+      }
+    ]
+  },
+  {
+    "company": "Cencosud S.A.",
+    "date": "2 años 7 meses",
+    "img": "/src/assets/companies/cencosud.jpg",
+    "country": "Chile 🇨🇱",
+    "positions": [
+      {
+        "title": "Technical Product Owner",
+        "date": "jun. 2020 - nov. 2020 · 6 meses",
+        "description": "Desarrollo servicios Last Mile, Stock y calculos de fechas con entregas entre diferentes tiendas, centros de distribución, proveedores.<br>-Desarrollo Backend y Frontend<br>-Microservicios utilizando tecnologías API Rest, GraphQL, Elasticsearch<br>-MongoDB, PostgreSQL, NodeJS, ReactJS, Java"
+      },
+      {
+        "title": "Front-end Engineer Lead",
+        "date": "may. 2018 - may. 2020 · 2 años 1 mes",
+        "description": "Desarrollo de plataforma web Headless basada en React para uso de ecommerce regional la cual permite montar diferentes sitios webs con un mismo código base versionado y mínima configuración posibilitando igualmente la customización mediante código para el uso de diferentes equipos de desarrollo en simultáneo.<br><br>- Desarrollo Frontend con React<br>- Desarrollo Backend con Microservicios NodeJS.<br>- Vtex<br><br>- www.jumbo.cl (ganador de varios premios Vtex)<br>- www.santaisabel.cl"
+      }
+    ]
+  },
+  {
+    "company": "Lyracons",
+    "img": "/src/assets/companies/lyracons.png",
+    "date": "2 años 6 meses",
+    "country": "Argentina 🇦🇷",
+    "positions": [
+      {
+        "title": "UX & Front-end Engineering Lead",
+        "date": "jun. 2015 - nov. 2017 · 2 años 6 meses",
+        "description": "Desarrollo, actualización y mantención de diversos sitios de Ecommerce, Mailing y plataformas de gestión Web (SPAs).<br>Desarrollo fullstack utilizando Magento v1 y v2, Vtex, Oracle ATG como plataformas de ecommerce."
+      }
+    ]
+  },
+  {
+    "company": "Compumundo S.A. (Grupo Garbarino)",
+    "img": "/src/assets/companies/compumundo.jpg",
+    "date": "4 años 3 meses",
+    "country": "Argentina 🇦🇷",
+    "positions": [
+      {
+        "title": "Jefe Departamento UI/UX / Front-end Devs",
+        "date": "mar. 2013 - abr. 2015 · 2 años 2 meses"
+      },
+      {
+        "title": "UI Developer",
+        "date": "feb. 2011 - feb. 2013 · 2 años 1 mes"
+      }
+    ]
+  },
+  {
+    "company": "Garbarino S.A. (Grupo Garbarino)",
+    "img": "/src/assets/companies/garbarino.jpg",
+    "date": "4 años 3 meses",
+    "country": "Argentina 🇦🇷",
+    "positions": [
+      {
+        "title": "Jefe Departamento UI/UX / Front-end Devs",
+        "date": "mar. 2013 - abr. 2015 · 2 años 2 meses",
+        "description": "Rediseño de la web utilizando AngularJS, con un enfoque basado 100% en la experiencia de usuario (UX).<br>- Modernización de proyecto on-premise a cloud.<br>- Rediseño UX/UI centrado en el usuario.<br>- Mejora en la catalogación de productos para potenciar la UX.<br><br>- PHP framework web de ecommerce Backend<br>- HTML, CSS, LESS, AngularJS, Angular2"
+      },
+      {
+        "title": "UI Developer",
+        "date": "feb. 2011 - feb. 2013 · 2 años 1 mes",
+        "description": "Desarrollo del primer ecommerce responsive de Argentina.<br>Implementación front-end sitio web www.garbarino.com desarrollado en PHP + jQuery.<br><br>- Diseño de interfaces UI/UX, maquetación y programación Front-end.<br>- Desarrollo de Apps facebook para campañas publicitarias."
+      }
+    ]
+  },
+  {
+    "company": "iPoint (Grupo Garbarino)",
+    "img": "/src/assets/companies/ipoint.jpg",
+    "date": "4 años 6 meses",
+    "country": "Argentina 🇦🇷",
+    "positions": [
+      {
+        "title": "Webmaster - Diseñador Web Sr.",
+        "date": "nov. 2010 - abr. 2015 · 4 años 6 meses",
+        "description": "<span>- Diseño y administración del sitio iPoint.com.ar<br>- Desarrollo Web Frontend y Backend.<br>- Gestión de catálogo de productos, promociones y ofertas junto a equipos Marketing y Comercial.<br>- Desarrollo de campañas publicitarias facebook, google.</span>"
+      }
+    ]
+  },
+  {
+    "company": "Freelance",
+    "img": "/src/assets/companies/nico-mach.jpg",
+    "date": "5 años 3 meses",
+    "country": "Argentina 🇦🇷",
+    "positions": [
+      {
+        "title": "Webmaster - Diseñador Web Sr.",
+        "date": "ene. 2007 - mar. 2012 · 5 años 3 meses",
+        "description": "Desarrollo de sitios webs para pequeñas y grandes empresas, emprendedores y sitios personales.<br><br>- Especialización en sitios animados con Macromedia Flash y utilización de Action Script<br>- HTML, CSS, Less, Sass, PHP, Javascrip, jQuery, Mootools."
+      }
+    ]
+  }
+]

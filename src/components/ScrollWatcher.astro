@@ -1,0 +1,27 @@
+<div class="scroll-watcher"></div>
+<style>
+  .scroll-watcher {
+    height: 3px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(
+      90deg,
+      #231d63 0%,
+      rgba(67, 155, 119, 1) 95%,
+      rgba(106, 255, 193, 1) 100%
+    );
+    border-radius: 30%;
+    width: 100%;
+    scale: 0 1;
+    transform-origin: left;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll(y);
+  }
+
+  @keyframes scroll-watcher {
+    to {
+      scale: 1 1;
+    }
+  }
+</style>

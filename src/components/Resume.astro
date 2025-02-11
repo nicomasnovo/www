@@ -1,0 +1,152 @@
+---
+import { Image } from 'astro:assets'
+import ResumeItem from './ResumeItem.astro'
+import resume from '@/data/resume.json'
+import hand from '@/assets/hand.webp'
+---
+
+<section class='px-8 py-12 parallax-container relative' id='resume'>
+  <div
+    class='md:w-[40em] blur-[300px] top-20 h-72 rounded-full bg-purple-800 absolute pointer-events-none select-none left-20'
+  >
+  </div>
+  <div
+    class='md:w-[80em] blur-[300px] h-40 rounded-full bg-indigo-500 absolute pointer-events-none select-none top-1/4 right-0'
+  >
+  </div>
+  <div
+    class='md:w-[40em] blur-[300px] top-2/4 h-72 rounded-full bg-indigo-800 absolute pointer-events-none select-none'
+  >
+  </div>
+  <div
+    class='md:w-[80em] blur-[300px] h-72 rounded-full bg-purple-900 absolute pointer-events-none select-none bottom-64 right-0'
+  >
+  </div>
+
+  <div class='max-w-3xl mx-auto'>
+    <h2 class='text-2xl ml-[-12px] mb-10 text-white'>
+      Les comparto un poco de mi experiencia:
+    </h2>
+    <div class='relative'>
+      <div class='absolute left-[-200px] parallax-element flex items-center'>
+        <span
+          class='mt-2 bg-slate-600 text-white text-sm font-medium me-2 px-2.5 py-0.5 rounded ms-3'
+          >Yo estoy acá</span
+        >
+        <Image src={hand} alt='hand' width={40} />
+      </div>
+      <ol class='border-s border-gray-700'>
+        {
+          resume.map((item) => {
+            return (
+              <li class='mb-14 ms-12'>
+                <ResumeItem
+                  title={item.company}
+                  img={item.img}
+                  date={item.date}
+                  country={item.country}
+                  current={item.current}
+                />
+                {item?.positions?.map((item) => (
+                  <ResumeItem
+                    title={item.title}
+                    description={item.description}
+                    date={item.date}
+                  />
+                ))}
+              </li>
+            )
+          })
+        }
+      </ol>
+    </div>
+  </div>
+</section>
+
+<script>
+  function setupParallax() {
+    const hand = document.querySelector('.parallax-element') as HTMLElement
+    const text = document.querySelector('.parallax-element span') as HTMLElement
+    const container = document.querySelector(
+      '.parallax-container'
+    ) as HTMLElement
+    let ticking = false
+    let containerHeight = 0
+
+    function init() {
+      if (!container) return
+      containerHeight = container.clientHeight
+    }
+
+    function updatePosition() {
+      if (!hand || !container || !containerHeight) return
+
+      const containerPosition = container.getBoundingClientRect().top
+
+      if (containerPosition > 0) {
+        hand.style.top = '0'
+        return
+      }
+
+      if (containerHeight - Math.abs(containerPosition) >= 400) {
+        hand.style.top = `${Math.abs(containerPosition)}px`
+      }
+
+      if (Math.abs(containerPosition) < 700) {
+        text.innerHTML = 'Yo estoy acá'
+      } else {
+        text.innerHTML = 'Pase por acá'
+      }
+
+      ticking = false
+    }
+
+    function onScroll() {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          updatePosition()
+          ticking = false
+        })
+        ticking = true
+      }
+    }
+
+    init()
+    window.addEventListener('resize', init)
+    window.addEventListener('scroll', onScroll)
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            window.addEventListener('scroll', onScroll)
+          } else {
+            window.removeEventListener('scroll', onScroll)
+          }
+        })
+      },
+      { threshold: 0 }
+    )
+
+    if (container) {
+      observer.observe(container)
+    }
+
+    return () => {
+      window.removeEventListener('resize', init)
+      window.removeEventListener('scroll', onScroll)
+      if (container) {
+        observer.unobserve(container)
+      }
+      observer.disconnect()
+    }
+  }
+
+  let cleanup = setupParallax()
+
+  document.addEventListener('astro:after-swap', () => {
+    if (cleanup) cleanup()
+
+    cleanup = setupParallax()
+  })
+</script>

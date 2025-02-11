@@ -1,0 +1,136 @@
+---
+import Layout from '@/layouts/LayoutNoIndex.astro'
+---
+
+<Layout basic={true}>
+  <div
+    class='text-gray-100 grid content-center h-screen w-screen text-center place-content-center'
+  >
+    <h1 class='text-xl'>Ask the ball</h1>
+    <div id='ball'>
+      <div class='inner-ball text-4xl'>🎱</div>
+    </div>
+    <div id='answer' class='text-2xl'></div>
+  </div>
+</Layout>
+
+<script>
+  const answers = [
+    "You know what? You're a towel!",
+    'Blame Canada!',
+    'Screw you guys, I’m going to Disneyland.',
+    'It’s coming right for us!',
+    'How do you kill that which has no life?',
+    'This is worse than when we cloned Stan’s dad.',
+    'Cartmanland is closed to the public!',
+    'Do you have any idea how serious this is?!',
+    'You will respect my authority!',
+    'Don’t forget to bring a towel.',
+    'Oh, God, they killed Kenny—AGAIN!',
+    'I’m not being insensitive, you’re being too sensitive.',
+    'You know, I’m starting to think this is a bad idea.',
+    'We all know it’s Randy’s fault.',
+    'I do what I want, when I want!',
+    'Drugs are bad, m’kay?',
+    'Oh, come on! It’s just a giant douche vs. a turd sandwich.',
+    'Respect my authoritah or face the consequences!',
+    'Why don’t you cry about it, Stan?',
+    'I blame society for this one.'
+  ]
+
+  const ballElement = document.getElementById('ball')
+  const answerElement = document.getElementById('answer')
+
+  function displayRandomAnswer() {
+    const randomIndex = Math.floor(Math.random() * answers.length)
+    if (answerElement) {
+      answerElement.textContent = answers[randomIndex]
+    }
+
+    answerElement?.classList.add('fading')
+    setTimeout(() => {
+      answerElement?.classList.remove('fading')
+    }, 1000)
+  }
+
+  function spinBall() {
+    ballElement?.classList.add('spinning')
+    setTimeout(() => {
+      ballElement?.classList.remove('spinning')
+      displayRandomAnswer()
+    }, 1000)
+  }
+
+  ballElement?.addEventListener('click', spinBall)
+
+  window.addEventListener('devicemotion', (event) => {
+    const acceleration = event.accelerationIncludingGravity
+
+    if (!acceleration) return
+
+    const { x, y, z } = acceleration
+
+    if (x > 15 || y > 15 || z > 15) {
+      spinBall()
+    }
+  })
+
+  if (
+    typeof DeviceMotionEvent !== 'undefined' &&
+    typeof (DeviceMotionEvent as any).requestPermission === 'function'
+  ) {
+    if (
+      typeof DeviceMotionEvent !== 'undefined' &&
+      typeof (DeviceMotionEvent as any).requestPermission === 'function'
+    ) {
+      // iOS: Request permission
+      DeviceMotionEvent.requestPermission()
+        .then((response) => {
+          console.log('aaa')
+          if (response === 'granted') {
+            console.log('Motion permission granted!')
+          } else {
+            console.log('Motion permission denied.')
+            alert('You need to enable motion data to use the Magic 8-Ball!')
+          }
+        })
+        .catch((err) => {
+          console.error('Error requesting motion permission:', err)
+          alert('Motion permission could not be requested.')
+        })
+    } else {
+      // Non-iOS or unsupported browser
+      console.log(
+        'DeviceMotionEvent permission request not required or not supported.'
+      )
+    }
+  }
+</script>
+<style>
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Animation for text fading in */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .spinning {
+    animation: spin 1s linear;
+  }
+
+  .fading {
+    animation: fadeIn 1s ease-out;
+  }
+</style>

@@ -1,0 +1,174 @@
+<div class='ball'>
+  <span></span>
+</div>
+
+<style>
+  html {
+    cursor: none !important;
+  }
+
+  .ball {
+    --ball-size: 50px;
+    --ball-color: #fff;
+    --shadow-color: rgba(255, 255, 255, 0.2);
+    --moon-color: #ccc;
+
+    position: fixed;
+    width: var(--ball-size);
+    height: var(--ball-size);
+    background-color: var(--ball-color);
+    border-radius: 50%;
+    z-index: 1000;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    transition: scale 0.3s ease;
+    scale: 0;
+
+    &.visible {
+      scale: 1;
+    }
+
+    &.hover {
+      scale: 2;
+    }
+
+    &.moons {
+      box-shadow: 0 0 10px 5px var(--shadow-color);
+      &::after,
+      &::before,
+      span {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        background: var(--moon-color);
+        inset: 0;
+        margin: auto;
+        animation:
+          mvX 2.4s cubic-bezier(0.5, -350, 0.5, 300) infinite,
+          mvY 1.2s cubic-bezier(0.5, -350, 0.5, 300) infinite;
+      }
+
+      &::before {
+        width: 12px;
+        height: 12px;
+      }
+      &::after {
+        width: 8px;
+        height: 8px;
+        animation-direction: reverse;
+        animation-delay: 0.7s;
+        opacity: 0.5;
+        filter: blur(10px);
+        box-shadow: 0 0 10px 5px var(--shadow-color);
+      }
+      & span {
+        width: 4px;
+        height: 4px;
+        animation-direction: reverse;
+        animation-delay: 0.4s;
+      }
+    }
+  }
+  @keyframes mvX {
+    100% {
+      left: 0.85px;
+    }
+  }
+  @keyframes mvY {
+    100% {
+      top: 0.5px;
+    }
+  }
+</style>
+
+<script>
+  //May be to much typing but I was practicing
+  interface BallElement extends HTMLElement {
+    offsetWidth: number
+    offsetHeight: number
+    style: CSSStyleDeclaration
+  }
+
+  const body: HTMLElement = document.body
+  const ball: BallElement = document.querySelector('.ball') as BallElement
+  const nameElement: HTMLElement | null = document.querySelector('#name')
+
+  /**
+   * Handles mouse movement to update ball position
+   * @param {MouseEvent} event - Mouse movement event
+   * @returns {void}
+   */
+  const handleMouseMove = (event: MouseEvent): void => {
+    const x: number = event.clientX
+    const y: number = event.clientY
+
+    ball.style.left = `${x - ball.offsetWidth / 2}px`
+    ball.style.top = `${y - ball.offsetHeight / 2}px`
+
+    ball.classList.add('visible')
+  }
+
+  /**
+   * Handles mouse enter on name element
+   * @returns {void}
+   */
+  const handleNameEnter = (): void => {
+    ball.classList.add('hover')
+  }
+
+  /**
+   * Handles mouse leave on name element
+   * @returns {void}
+   */
+  const handleNameLeave = (): void => {
+    ball.classList.remove('hover')
+  }
+
+  /**
+   * Positions the ball for mobile/small screen layouts
+   * @returns {void}
+   */
+  const setBallPositionForSmallScreens = (): void => {
+    ball.classList.add('mobile')
+  }
+
+  /**
+   * Removes mobile-specific positioning class
+   * @returns {void}
+   */
+  const removeMobileClass = (): void => {
+    ball.classList.remove('mobile')
+  }
+
+  /**
+   * Updates ball behavior based on viewport width
+   * Adds/removes event listeners and classes for mobile vs desktop
+   * @returns {void}
+   */
+  const updateBehavior = (): void => {
+    const viewportWidth: number = window.innerWidth
+    if (viewportWidth < 770) {
+      body.removeEventListener('mousemove', handleMouseMove)
+      nameElement?.removeEventListener('mouseenter', handleNameEnter)
+      nameElement?.removeEventListener('mouseleave', handleNameLeave)
+      setBallPositionForSmallScreens()
+    } else {
+      removeMobileClass()
+      body.addEventListener('mouseenter', (): void => {
+        ball.classList.toggle('visible')
+      })
+
+      body.addEventListener('mouseleave', (): void => {
+        ball.classList.remove('visible')
+      })
+      body.addEventListener('mousemove', handleMouseMove)
+
+      nameElement?.addEventListener('mouseenter', handleNameEnter)
+      nameElement?.addEventListener('mouseleave', handleNameLeave)
+    }
+  }
+
+  window.addEventListener('resize', updateBehavior)
+
+  updateBehavior()
+</script>

@@ -1,0 +1,9 @@
+---
+const { title, skew = 'skew-x-6', url } = Astro.props
+---
+
+<a href={url} class='text-3xl text-white relative w-fit px-3'>
+  <span class='z-20 relative text-blue-800'>{title}</span>
+  <i class={`w-full ${skew} bg-[#ffec9f] h-full absolute left-0 top-0 z-10`}
+  ></i>
+</a>

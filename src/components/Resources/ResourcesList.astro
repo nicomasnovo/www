@@ -1,0 +1,43 @@
+---
+import BackBtn from '@/components/Resources/BackBtn.astro'
+import data from '@/data/resources.json'
+---
+
+<section class='container mx-auto px-4 py-8'>
+  <div class='flex justify-between items-center md:mt-12 mb-6'>
+    <h2 class='text-3xl text-white relative w-fit px-3'>
+      <span class='z-20 relative text-blue-800'>Useful Links</span>
+      <i
+        class='w-full skew-x-[-8deg] bg-[#ffec9f] h-full absolute left-0 top-0 z-10'
+      ></i>
+    </h2>
+    <BackBtn small />
+  </div>
+  <div class='grid grid-cols-1 sm:grid-cols-2 gap-8 text-white mb-20'>
+    {
+      data.categories.map((category) => (
+        <div class='flex flex-col gap-4'>
+          <strong class='text-lg bg-blue-400 w-fit px-4 rounded-xl'>
+            {category.title}:
+          </strong>
+          <ul class='space-y-4'>
+            {category.links.map((link) => (
+              <li>
+                <a
+                  href={link.url}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  class='font-bold hover:text-blue-400 transition-colors duration-200 underline decoration-dotted decoration-gray-400'
+                >
+                  {link.name}
+                </a>
+                <p class='mt-1 text-gray-300'>{link.description}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+  <BackBtn />
+</section>

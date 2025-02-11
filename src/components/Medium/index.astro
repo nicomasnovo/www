@@ -1,0 +1,47 @@
+---
+import Post from '@/components/Medium/Post.astro'
+import { getPosts } from '@/services/getPosts'
+
+const posts = await getPosts()
+const showViewMore = posts.length > 5
+---
+
+<section
+  id='medium'
+  class='px-4 py-20 mb-12 text-gray-200 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#3e2e9a] to-[#2b1150]'
+>
+  <div class='container mx-auto max-w-3xl text-gray-200'>
+    <h1 class='text-2xl font-bold mb-8'>Últimos Posts de Medium</h1>
+
+    <div>
+      {
+        posts
+          .slice(0, 6)
+          .map((post) => (
+            <Post
+              title={post.title}
+              date={post.date}
+              tags={post.tags}
+              link={post.link}
+              content={post.content}
+              image={post.image}
+            />
+          ))
+      }
+      {
+        showViewMore && (
+          <div class='text-center mt-10'>
+            <a
+              href='http://blog.nicomasnovo.com'
+              target='_blank'
+              rel='noopener noreferrer'
+              class='inline-block px-6 py-3 text-sm font-medium text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 drop-shadow-lg transition-colors'
+            >
+              Ver todos en Medium
+            </a>
+          </div>
+        )
+      }
+    </div>
+  </div>
+</section>

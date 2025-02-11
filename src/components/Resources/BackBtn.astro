@@ -1,0 +1,51 @@
+---
+const { small = false } = Astro.props
+---
+
+{
+  small ? (
+    <a
+      href='/resources'
+      class={`text-white rounded-xl bg-indigo-700 py-1 px-2 w-fit cursor-pointer hover:bg-indigo-800 hidden md:flex text-sm justify-center items-center gap-1`}
+    >
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        viewBox='0 0 24 24'
+        fill='none'
+        stroke='currentColor'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+        width='20'
+        height='20'
+        stroke-width='1.75'
+      >
+        <path d='M5 12h6m3 0h1.5m3 0h.5' />
+        <path d='M5 12l6 6' />
+        <path d='M5 12l6 -6' />
+      </svg>
+      <span>See all resources</span>
+    </a>
+  ) : (
+    <a
+      href='/resources'
+      class='text-white rounded-xl bg-indigo-700 px-4 py-2 w-fit cursor-pointer hover:bg-indigo-800 flex m-auto justify-center items-center gap-1'
+    >
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        viewBox='0 0 24 24'
+        fill='none'
+        stroke='currentColor'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+        width='20'
+        height='20'
+        stroke-width='1.75'
+      >
+        <path d='M5 12h6m3 0h1.5m3 0h.5' />
+        <path d='M5 12l6 6' />
+        <path d='M5 12l6 -6' />
+      </svg>
+      <span>See all resources</span>
+    </a>
+  )
+}

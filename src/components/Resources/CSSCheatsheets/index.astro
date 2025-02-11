@@ -1,0 +1,23 @@
+---
+import GradientGenerator from './GradientGenerator.vue'
+import BorderRadius from './BorderRadius.vue'
+import BackBtn from '@/components/Resources/BackBtn.astro'
+---
+
+<section class='container mx-auto px-4 py-8'>
+  <div class='flex justify-between items-center md:mt-12 mb-6'>
+    <h2 class='text-3xl text-white relative w-fit px-3'>
+      <span class='z-20 relative text-blue-800'>CSS Cheatsheets</span>
+      <i
+        class='w-full skew-x-[-8deg] bg-[#ffec9f] h-full absolute left-0 top-0 z-10'
+      ></i>
+    </h2>
+    <BackBtn small />
+  </div>
+  <div class='flex flex-col gap-6 mb-8'>
+    <BorderRadius client:load />
+    <GradientGenerator client:load />
+    <div class='text-white text-center'>WIP more to come...</div>
+  </div>
+  <BackBtn />
+</section>

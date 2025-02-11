@@ -1,0 +1,258 @@
+{
+    "categories": [
+        {
+            "title": "Software Engineering and System Design",
+            "books": [
+                {
+                    "title": "Clean Code",
+                    "author": "Robert C. Martin",
+                    "coverUrl": "/src/assets/books/clean-code.jpg",
+                    "isbn": "9780132350884",
+                    "asin": "0132350882"
+                },
+                {
+                    "title": "Clean Architecture",
+                    "author": "Robert C. Martin",
+                    "coverUrl": "/src/assets/books/clean-architecture.jpg",
+                    "isbn": "9780134494166",
+                    "asin": "0134494164"
+                },
+                {
+                    "title": "System Design Interview (Vol. 1)",
+                    "author": "Alex Xu",
+                    "coverUrl": "/src/assets/books/system-design-1.jpg",
+                    "isbn": "9798664653403",
+                    "asin": "B08CMF2CQF"
+                },
+                {
+                    "title": "System Design Interview (Vol. 2)",
+                    "author": "Alex Xu",
+                    "coverUrl": "/src/assets/books/system-design-2.jpg",
+                    "isbn": "9781737497831",
+                    "asin": "1736049119"
+                },
+                {
+                    "title": "Refactoring: Improving the Design of Existing Code",
+                    "author": "Martin Fowler",
+                    "coverUrl": "/src/assets/books/refactoring.jpg",
+                    "isbn": "9780134757599",
+                    "asin": "0134757599"
+                },
+                {
+                    "title": "The Pragmatic Programmer",
+                    "author": "David Thomas, Andrew Hunt",
+                    "coverUrl": "/src/assets/books/the-pragmatic.jpg",
+                    "isbn": "9780135957059",
+                    "asin": "0135957052"
+                },
+                {
+                    "title": "Designing Data-Intensive Applications",
+                    "author": "Martin Kleppmann",
+                    "coverUrl": "/src/assets/books/designing-data-intensive.jpg",
+                    "isbn": "9781449373320",
+                    "asin": "1449373321"
+                },
+                {
+                    "title": "A Philosophy of Software Design",
+                    "author": "John Ousterhout",
+                    "coverUrl": "/src/assets/books/a-philosophy-of-software-design.jpg",
+                    "isbn": "9781732102200",
+                    "asin": "1732102201"
+                },
+                {
+                    "title": "Code: The Hidden Language of Computer Hardware and Software",
+                    "author": "Charles Petzold",
+                    "coverUrl": "/src/assets/books/code.jpg",
+                    "isbn": "9780137909100",
+                    "asin": "0137909101"
+                }
+            ]
+        },
+        {
+            "title": "Manangement and leadership",
+            "books": [
+                {
+                    "title": "The Manager's Path",
+                    "author": "Camille Fournier",
+                    "coverUrl": "/src/assets/books/the-managers-path.jpg",
+                    "isbn": "9781491973899",
+                    "asin": "1491973897"
+                },
+                {
+                    "title": "Accelerate",
+                    "author": "Nicole Forsgren, Jez Humble, Gene Kim",
+                    "coverUrl": "/src/assets/books/accelerate.jpg",
+                    "isbn": "9781942788331",
+                    "asin": "1942788339"
+                },
+                {
+                    "title": "Radical Candor",
+                    "author": "Kim Scott",
+                    "coverUrl": "/src/assets/books/radical-candor.jpg",
+                    "isbn": "9781529038347",
+                    "asin": "1529038340"
+                },
+                {
+                    "title": "Managing Humans",
+                    "author": "Michael Lopp",
+                    "coverUrl": "/src/assets/books/managing-humans.jpg",
+                    "isbn": "9781484221570",
+                    "asin": "1484221575"
+                },
+                {
+                    "title": "Debugging Teams",
+                    "author": "Brian W. Fitzpatrick, Ben Collins-Sussman",
+                    "coverUrl": "/src/assets/books/debuggin-teams.jpg",
+                    "isbn": "9781491932056",
+                    "asin": "1491932058"
+                },
+                {
+                    "title": "Team Topologies",
+                    "author": "Matthew Skelton, Manuel Pais",
+                    "coverUrl": "/src/assets/books/team-topologies.jpg",
+                    "isbn": "9781942788812",
+                    "asin": "1942788819"
+                },
+                {
+                    "title": "Turn the Ship Around!",
+                    "author": "L. David Marquet",
+                    "coverUrl": "/src/assets/books/turn-the-ship-around.jpg",
+                    "isbn": "9781591846406",
+                    "asin": "1591846404"
+                }
+            ]
+        },
+        {
+            "title": "Productivity and goal management",
+            "books": [
+                {
+                    "title": "Measure What Matters",
+                    "author": "John Doerr",
+                    "coverUrl": "/src/assets/books/measure-what-matters.jpg",
+                    "isbn": "9780525536222",
+                    "asin": "0525536221"
+                },
+                {
+                    "title": "Atomic Habits",
+                    "author": "James Clear",
+                    "coverUrl": "/src/assets/books/atomic-habits.jpg",
+                    "isbn": "9780735211292",
+                    "asin": "0735211299"
+                },
+                {
+                    "title": "The Lean Startup",
+                    "author": "Eric Ries",
+                    "coverUrl": "/src/assets/books/the-lean-startup.jpg",
+                    "isbn": "9780307887894",
+                    "asin": "0307887898"
+                }
+            ]
+        },
+        {
+            "title": "Business management for engineers",
+            "books": [
+                {
+                    "title": "The Hard Thing About Hard Things",
+                    "author": "Ben Horowitz",
+                    "coverUrl": "/src/assets/books/the-hard-thing-about-hard-things.jpg",
+                    "isbn": "9780062273208",
+                    "asin": "0062273205"
+                },
+                {
+                    "title": "High Output Management",
+                    "author": "Andrew S. Grove",
+                    "coverUrl": "/src/assets/books/high-output-management.jpg",
+                    "isbn": "9780679762881",
+                    "asin": "0679762884"
+                },
+                {
+                    "title": "No Rules Rules",
+                    "author": "Reed Hastings, Erin Meyer",
+                    "coverUrl": "/src/assets/books/no-rules-rules.jpg",
+                    "isbn": "9780753553638",
+                    "asin": "0753553635"
+                },
+                {
+                    "title": "Running Lean",
+                    "author": "Ash Maurya",
+                    "coverUrl": "/src/assets/books/running-lean.jpg",
+                    "isbn": "9781449305178",
+                    "asin": "1449305172"
+                }
+            ]
+        },
+        {
+            "title": "Agility and agile development",
+            "books": [
+                {
+                    "title": "Scrum: The Art of Doing Twice the Work in Half the Time",
+                    "author": "Jeff Sutherland",
+                    "coverUrl": "/src/assets/books/scrum.jpg",
+                    "isbn": "9780385346450",
+                    "asin": "038534645X"
+                },
+                {
+                    "title": "Agile Estimating and Planning",
+                    "author": "Mike Cohn",
+                    "coverUrl": "/src/assets/books/agile-estimating.jpg",
+                    "isbn": "9780131479418",
+                    "asin": "0131479415"
+                },
+                {
+                    "title": "Kanban: Successful Evolutionary Change for Your Technology Business",
+                    "author": "David J. Anderson",
+                    "coverUrl": "/src/assets/books/kanban.jpg",
+                    "isbn": "9780984521401",
+                    "asin": "0984521402"
+                },
+                {
+                    "title": "User Story Mapping",
+                    "author": "Jeff Patton",
+                    "coverUrl": "/src/assets/books/user-story-mapping.jpg",
+                    "isbn": "9781491904909",
+                    "asin": "1491904909"
+                },
+                {
+                    "title": "Scaling Lean & Agile Development",
+                    "author": "Craig Larman, Bas Vodde",
+                    "coverUrl": "/src/assets/books/scaling-lean.jpg",
+                    "isbn": "9780321480965",
+                    "asin": "0321480961"
+                }
+            ]
+        },
+        {
+            "title": "Extra strategic and practical",
+            "books": [
+                {
+                    "title": "Inspired: How to Create Products Customers Love",
+                    "author": "Marty Cagan",
+                    "coverUrl": "/src/assets/books/inspired.jpg",
+                    "isbn": "9781119387503",
+                    "asin": "1119387507"
+                },
+                {
+                    "title": "Software Engineering at Google",
+                    "author": "Titus Winters",
+                    "coverUrl": "/src/assets/books/google.jpg",
+                    "isbn": "9781492082798",
+                    "asin": "1492082791"
+                },
+                {
+                    "title": "Drive: The Surprising Truth About What Motivates Us",
+                    "author": "Daniel Pink",
+                    "coverUrl": "/src/assets/books/drive.jpg",
+                    "isbn": "9781594484803",
+                    "asin": "1594484805"
+                },
+                {
+                    "title": "The Lean Product Playbook",
+                    "author": "Dan Olsen",
+                    "coverUrl": "/src/assets/books/lean-playbook.jpg",
+                    "isbn": "9781118960875",
+                    "asin": "1118960874"
+                }
+            ]
+        }
+    ]
+}

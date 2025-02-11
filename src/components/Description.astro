@@ -1,0 +1,84 @@
+---
+const { pathname } = Astro.url
+---
+
+<section>
+  <div class='text-xl md:text-2xl mt-12'>
+    Hago ingeniería de software, lidero equipos y trato de que todo funcione.
+    <span class='relative w-fit px-2 text-xl flex lg:inline'
+      >(y si no, le echo la culpa a los bugs).<i class='highlight lg:mt-1'
+      ></i></span
+    >
+  </div>
+</section>
+<style>
+  #fade-container {
+    height: 100px;
+  }
+  #fade-container p {
+    opacity: 1;
+  }
+  .fade-container p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fade-in 1s ease forwards;
+    counter-increment: line-number;
+  }
+
+  .highlight {
+    opacity: 0;
+    transform: skew(-27deg, 0);
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 100%;
+    width: 100%;
+    padding: 0 0.5rem;
+    mix-blend-mode: difference;
+    background: linear-gradient(
+      to right,
+      rgb(255, 236, 159) 50%,
+      rgba(255, 255, 255, 0) 50%
+    );
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 0.5s ease-out;
+  }
+
+  .highlight.b {
+    transform: skew(-8deg, 0);
+  }
+
+  .highlight.active {
+    opacity: 1;
+    background-position: left bottom;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+<script define:vars={{ pathname }}>
+  function highlightText() {
+    const highlights = document.querySelectorAll('.highlight')
+    highlights.forEach((highlight, i) => {
+      setTimeout(() => {
+        highlight.classList.add('active')
+      }, i * 600)
+    })
+  }
+
+  document.addEventListener('astro:page-load', (e) => {
+    if (pathname !== '/resources') {
+      setTimeout(highlightText, 1000)
+    }
+  })
+</script>
