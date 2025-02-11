@@ -1,6 +1,7 @@
 {
   "name": "Nico Masnovo",
   "short_name": "Nico Masnovo",
+  "description": "Nico Masnovo's personal web page",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -13,7 +14,8 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#050133",
+  "background_color": "#050133",
+  "orientation": "portrait-primary",
   "display": "standalone"
 }
