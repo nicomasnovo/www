@@ -101,6 +101,12 @@ The website integrates with Medium through an automated GitHub Actions workflow 
 - Updates a local JSON file with post metadata and content
 - Downloads and processes post images into the appropriate asset folders
 
+## TODO list of things I still need to improve:
+
+- Better folder structure, right now componets folder is a mess.
+- Add better documentation.
+- Add more CSS cheatsheets
+
 ## 🤝 Connect with me
 
 [![Website](https://img.shields.io/badge/Website-4A90E2?style=for-the-badge&logo=google-chrome&logoColor=white)](https://nicomasnovo.com)

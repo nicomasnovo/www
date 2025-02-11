@@ -10,7 +10,7 @@ const links = [
 ---
 
 <div
-  class='md:w-screen fixed h-16 z-50 md:flex bottom-4 inset-x-0 m-auto md:bottom-auto max-w-4xl'
+  class='md:w-screen fixed h-16 z-50 md:flex bottom-6 inset-x-0 m-auto md:bottom-auto max-w-4xl'
   transition:persist
 >
   <div
@@ -34,7 +34,7 @@ const links = [
               class='relative justify-center text-white font-bold flex h-full items-center hover:bg-black hover:bg-opacity-20 px-6 md:px-4 flex flex-col'
               data-href={href}
             >
-              <Icon name={icon} class='lg:hidden mb-1 text-2xl' />
+              <Icon name={icon} class='md:hidden mb-1 text-2xl' />
               <span class='text-xs md:text-base'>{label}</span>
             </a>
           )
