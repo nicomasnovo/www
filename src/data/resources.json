@@ -92,6 +92,21 @@
                     "name": "CSS Grid Generator",
                     "url": "https://cssgridgenerator.io/",
                     "description": "Create custom CSS grid layouts more easily."
+                },
+                {
+                    "name": "Learn Anything",
+                    "url": "https://www.mindluster.com/",
+                    "description": "Discover and learn about any topic with Learn-Anything (from Software Engineering related)."
+                },
+                {
+                    "name": "Mind Luster",
+                    "url": "https://learn-anything.xyz/",
+                    "description": "Mind Luster - 300,000 Online Courses and MOOCs with Free Certificates in one place"
+                },
+                {
+                    "name": "Olivier Larose Blog",
+                    "url": "https://blog.olivierlarose.com/tutorials/horizontal-scroll",
+                    "description": "Useful and cool animations. Most of them free. (also could help as inspiration)"
                 }
             ]
         },
@@ -137,6 +152,26 @@
                     "name": "Google Fonts",
                     "url": "https://fonts.google.com",
                     "description": "Free and optimized fonts for the web."
+                },
+                {
+                    "name": "unDraw",
+                    "url": "https://undraw.co/",
+                    "description": "Open-source illustrations for any idea you can imagine and create."
+                },
+                {
+                    "name": "Shapes",
+                    "url": "https://shapes.framer.website/",
+                    "description": "Explore the collection of 120+ basic SVG shapes for your upcoming project."
+                },
+                {
+                    "name": "Jason Murray's toolbox",
+                    "url": "https://thetoolbox.art/",
+                    "description": "Jason Murray's resourses"
+                },
+                {
+                    "name": "Color Hunt",
+                    "url": "https://colorhunt.co/",
+                    "description": "Color palettes for designers and artists"
                 }
             ]
         },
@@ -262,6 +297,31 @@
                     "name": "Have I Been Pwned",
                     "url": "https://haveibeenpwned.com",
                     "description": "Check if your accounts have been compromised in data breaches."
+                }
+            ]
+        },
+        {
+            "title": "Other interesting and useful",
+            "links": [
+                {
+                    "name": "Devhints",
+                    "url": "https://devhints.io/",
+                    "description": "TL;DR for developers documentation."
+                },
+                {
+                    "name": "React Bits",
+                    "url": "https://www.reactbits.dev/",
+                    "description": "Hand-picked animated components collection for creative developers."
+                },
+                {
+                    "name": "Omatsuri",
+                    "url": "https://omatsuri.app",
+                    "description": "Fake data generator and other usefull things."
+                },
+                {
+                    "name": "HTML Rev",
+                    "url": "https://htmlrev.com/",
+                    "description": "1500+ free HTML templates for websites, landing pages, blogs, portfolios, ecommerce and admin dashboards."
                 }
             ]
         },
