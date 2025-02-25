@@ -1,5 +1,17 @@
 [
   {
+    "title": "Contratando desarrolladores: Más allá del código",
+    "date": "February 25, 2025",
+    "tags": [
+      "interview",
+      "job-interview",
+      "cultural-fit"
+    ],
+    "link": "https://blog.nicomasnovo.com/contratando-desarrolladores-m%C3%A1s-all%C3%A1-del-c%C3%B3digo-e0b00005eeee",
+    "content": "Como manager de ingeniería, siempre me causa gracia cuando veo ofertas de trabajo pidiendo “ninja del código” o “rockstar developer”. ¿En serio? realm...",
+    "image": "/posts/images/contratando-desarrolladores-m%C3%A1s-all%C3%A1-del-c%C3%B3digo-e0b00005eeee.jpeg"
+  },
+  {
     "title": "Mide lo que importa: Cómo los OKRs pueden transformar tu trabajo (y tu vida)",
     "date": "February 17, 2025",
     "tags": [
@@ -107,15 +119,5 @@
     "link": "https://blog.nicomasnovo.com/reflexionando-sobre-el-crecimiento-profesional-en-ingenier%C3%ADa-de-software-0c7617ebd19d",
     "content": "Mi camino en la ingeniería de software ha estado lleno de desafíos y aprendizajes. Desde mis primeros pasos como desarrollador hasta llegar a ser Sr. ...",
     "image": "/posts/images/reflexionando-sobre-el-crecimiento-profesional-en-ingenier%C3%ADa-de-software-0c7617ebd19d.jpeg"
-  },
-  {
-    "title": "El teletrabajo: ¿ha llegado realmente su fin?",
-    "date": "December 20, 2024",
-    "tags": [
-      "teletrabajo"
-    ],
-    "link": "https://blog.nicomasnovo.com/el-teletrabajo-ha-llegado-realmente-su-fin-2eaf4e623b19",
-    "content": "En los últimos meses, el debate sobre el teletrabajo volvió a tomar protagonismo. Empresas como Amazon, Google y tantas otras están empezando a exigir...",
-    "image": "/posts/images/el-teletrabajo-ha-llegado-realmente-su-fin-2eaf4e623b19.jpeg"
   }
 ]
