@@ -1,5 +1,19 @@
 [
   {
+    "title": "Del “Me Parece” al “Datos Muestran”: la magia del Discovery en el Mundo Lean",
+    "date": "March 12, 2025",
+    "tags": [
+      "lean-startup",
+      "product-discovery",
+      "agile",
+      "innovation",
+      "product-management"
+    ],
+    "link": "https://blog.nicomasnovo.com/del-me-parece-al-datos-muestran-la-magia-del-discovery-en-el-mundo-lean-7d2348c1562e",
+    "content": "¿Cuántas veces escuchaste “tengo una idea brillante para un producto”? ¿Y cuántas de esas ideas brillantes terminaron siendo un éxito real? La diferen...",
+    "image": "/posts/images/del-me-parece-al-datos-muestran-la-magia-del-discovery-en-el-mundo-lean-7d2348c1562e.jpeg"
+  },
+  {
     "title": "Contratando desarrolladores: Más allá del código",
     "date": "February 25, 2025",
     "tags": [
@@ -108,16 +122,5 @@
     "link": "https://blog.nicomasnovo.com/el-futuro-de-la-agilidad-qu%C3%A9-sigue-despu%C3%A9s-de-scrum-y-kanban-a6c57e8ff9e0",
     "content": "A lo largo de mi carrera, he pasado por empresas que adoptaron diferentes enfoques ágiles: Scrum, Kanban, incluso Shape Up. Como profesional me certif...",
     "image": "/posts/images/el-futuro-de-la-agilidad-qu%C3%A9-sigue-despu%C3%A9s-de-scrum-y-kanban-a6c57e8ff9e0.jpeg"
-  },
-  {
-    "title": "Reflexionando sobre el crecimiento profesional en Ingeniería de Software",
-    "date": "January 15, 2025",
-    "tags": [
-      "career-paths",
-      "software-engineering"
-    ],
-    "link": "https://blog.nicomasnovo.com/reflexionando-sobre-el-crecimiento-profesional-en-ingenier%C3%ADa-de-software-0c7617ebd19d",
-    "content": "Mi camino en la ingeniería de software ha estado lleno de desafíos y aprendizajes. Desde mis primeros pasos como desarrollador hasta llegar a ser Sr. ...",
-    "image": "/posts/images/reflexionando-sobre-el-crecimiento-profesional-en-ingenier%C3%ADa-de-software-0c7617ebd19d.jpeg"
   }
 ]
