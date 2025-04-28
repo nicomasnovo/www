@@ -1,5 +1,31 @@
 [
   {
+    "title": "Story Points: La Métrica que Está Frenando a tu Empresa",
+    "date": "April 28, 2025",
+    "tags": [
+      "story-points",
+      "metrics",
+      "agile",
+      "scrum"
+    ],
+    "link": "https://blog.nicomasnovo.com/story-points-la-m%C3%A9trica-que-est%C3%A1-frenando-a-tu-empresa-396730a3627a",
+    "content": "En el mundo del desarrollo ágil, los story points se han convertido en un estándar de facto para la estimación de esfuerzo. Sin embargo, después de añ...",
+    "image": "/posts/images/story-points-la-m%C3%A9trica-que-est%C3%A1-frenando-a-tu-empresa-396730a3627a.png"
+  },
+  {
+    "title": "La IA en la atención al cliente: Transformando las experiencias de servicio",
+    "date": "April 22, 2025",
+    "tags": [
+      "automation",
+      "customer-success",
+      "customer-service",
+      "ai"
+    ],
+    "link": "https://blog.nicomasnovo.com/la-ia-en-la-atenci%C3%B3n-al-cliente-transformando-las-experiencias-de-servicio-2f0cbf16b6ff",
+    "content": "¿Sabés qué está pasando con la atención al cliente últimamente? La inteligencia artificial está cambiando todo el panorama. Lo que antes requería gran...",
+    "image": "/posts/images/la-ia-en-la-atenci%C3%B3n-al-cliente-transformando-las-experiencias-de-servicio-2f0cbf16b6ff.png"
+  },
+  {
     "title": "Crossfit Mental: cómo mantener tu cerebro en forma",
     "date": "March 18, 2025",
     "tags": [
@@ -99,28 +125,5 @@
     "link": "https://blog.nicomasnovo.com/el-trabajo-en-equipo-seamos-sinceros-qu%C3%A9-tan-importante-es-realmente-1c7166c5002b",
     "content": "Últimamente todo el mundo habla del trabajo en equipo como si fuera la octava maravilla del mundo. Y sí, está bueno y es necesario, pero seamos realis...",
     "image": "/posts/images/el-trabajo-en-equipo-seamos-sinceros-qu%C3%A9-tan-importante-es-realmente-1c7166c5002b.jpeg"
-  },
-  {
-    "title": "La presión oculta de ser Engineering Manager: Entre el código y la gente",
-    "date": "January 18, 2025",
-    "tags": [
-      "under-pressure",
-      "engineering-management",
-      "leads"
-    ],
-    "link": "https://blog.nicomasnovo.com/la-presi%C3%B3n-oculta-de-ser-engineering-manager-entre-el-c%C3%B3digo-y-la-gente-847eaed4f30b",
-    "content": "“Ahora vivís de reuniones, ¿no? Ya no trabajás como antes”, me dijo un excompañero el otro día, mientras yo malabareaba entre tres crisis simultáneas ...",
-    "image": "/posts/images/la-presi%C3%B3n-oculta-de-ser-engineering-manager-entre-el-c%C3%B3digo-y-la-gente-847eaed4f30b.jpeg"
-  },
-  {
-    "title": "Rompiendo barreras invisibles: Conseguí tu primer trabajo o cambiá de empresa en ingeniería de…",
-    "date": "January 17, 2025",
-    "tags": [
-      "techo-de-cristal",
-      "software-engineering"
-    ],
-    "link": "https://blog.nicomasnovo.com/rompiendo-barreras-invisibles-consegu%C3%AD-tu-primer-trabajo-o-cambi%C3%A1-de-empresa-en-ingenier%C3%ADa-de-33c7a4c40d3f",
-    "content": "Rompiendo barreras invisibles: Conseguí tu primer trabajo o cambiá de empresa en ingeniería de software sin importar tu edad o género ¿Alguna vez sent...",
-    "image": "/posts/images/rompiendo-barreras-invisibles-consegu%C3%AD-tu-primer-trabajo-o-cambi%C3%A1-de-empresa-en-ingenier%C3%ADa-de-33c7a4c40d3f.jpeg"
   }
 ]
