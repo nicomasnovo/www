@@ -6,7 +6,7 @@
 
 <h3 align="center">Sr. Software Engineer Manager</h3>
 
-<p align="center">Currently employed at <strong>BCI - MACH</strong></p>
+<p align="center">Currently employed at <strong>BCI - MACHBANK</strong></p>
 <p align="center">This repository contains the source code for my personal website built with Astro. The site serves as a professional portfolio and resource hub for engineering management and software development.</p>
 
 ## 🚀 Tech Stack for this project
