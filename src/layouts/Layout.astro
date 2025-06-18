@@ -2,6 +2,7 @@
 import ScrollWatcher from '@/components/ScrollWatcher.astro'
 import Header from '@/components/Header.astro'
 import { ClientRouter } from 'astro:transitions'
+import { getThemeClass } from '@/utils/theme'
 
 const {
   basic,
@@ -13,9 +14,23 @@ const {
 const title = Astro.props.title
   ? 'Nico Masnovo | ' + Astro.props.title
   : 'Nico Masnovo'
+
+const colors = [
+  'bg-gray-900',
+  'bg-[#0d1a1f]',
+  'bg-[#0d1f26]',
+  'bg-[#050133]',
+  'bg-[#06070c]',
+  'bg-[#240b36]',
+  'bg-[#050133]'
+]
+const base = 'scroll-smooth scroll-p-0 lg:scroll-p-14'
+const baseHTML = 'antialiased font-nunito'
+const htmlClass = getThemeClass({ colors, base })
+const bodyClass = getThemeClass({ colors, base: baseHTML })
 ---
 
-<html lang='en' class='bg-gray-900 scroll-smooth scroll-p-0 lg:scroll-p-14'>
+<html lang='en' class={htmlClass}>
   <head>
     <meta charset='UTF-8' />
     <meta name='theme-color' content='#050133' />
@@ -81,14 +96,14 @@ const title = Astro.props.title
     <ClientRouter />
   </head>
 
-  <body class='dark:bg-gray-900 antialiased font-nunito'>
+  <body class={bodyClass}>
     {basic ? null : <ScrollWatcher />}
     {basic ? null : <Header />}
     <slot />
     {
       basic ? null : (
         <footer class='text-center text-gray-400'>
-          <ul class='p-10 max-w-3xl m-auto list-none gap-2 flex flex-col md:flex-row justify-center bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] to-gray-900 via-gray-900 from-[#161150] from-40% pb-24 md:pb-10'>
+          <ul class='p-10 max-w-3xl m-auto list-none gap-2 flex flex-col md:flex-row justify-center bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] to-transparent from-[#161150] to-80% pb-24 md:pb-10'>
             <li>Made with Astro, Tailwind</li>
             <li>
               ( love ♡ and lots of{' '}

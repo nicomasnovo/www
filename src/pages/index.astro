@@ -7,13 +7,25 @@ import Follow from '@/components/Follow.astro'
 import Description from '@/components/Description.astro'
 import GHContributions from '@/components/GHContributions.astro'
 import Medium from '@/components/Medium/index.astro'
+import { getThemeClass } from '@/utils/theme'
+
+const colors = [
+  'from-[#2e409a] to-[#050133]',
+  'from-[#2C5364] to-[#000000]',
+  'from-[#621e19] to-[#0d1f26]',
+  'from-[#7e3a63] to-[#050133]',
+  'from-[#2a5554] to-[#06070c]',
+  'from-[#5a0715] to-[#240b36]',
+  'from-[#780206] to-[#061161]'
+]
+const base =
+  'lg:pt-14 px-8 text-gray-900 text-white bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] min-h-dvh grid items-center justify-center pixelin'
+
+const sectionClass = getThemeClass({ colors, base })
 ---
 
 <Layout>
-  <section
-    class='lg:pt-14 px-8 text-gray-900 text-white bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-[#2e409a] to-[#050133] min-h-dvh grid items-center justify-center pixelin'
-    id='start'
-  >
+  <section class={sectionClass} id='start'>
     <div class='max-w-3xl pt-16 pb-12 md:px-8 z-10 relative'>
       <Name />
       <Description />

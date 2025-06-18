@@ -3,9 +3,23 @@ import { Image } from 'astro:assets'
 import ResumeItem from './ResumeItem.astro'
 import resume from '@/data/resume.json'
 import hand from '@/assets/hand.webp'
+import { getThemeClass } from '@/utils/theme'
+
+const colors = [
+  'bg-[#050133]',
+  'bg-[#0d1a1f]',
+  'bg-[#0d1f26]',
+  'bg-[#050133]',
+  'bg-[#06070c]',
+  'bg-[#240b36]',
+  'bg-[#050133]'
+]
+const base = 'px-8 py-12 parallax-container relative'
+
+const sectionClass = getThemeClass({ colors, base })
 ---
 
-<section class='px-8 py-12 parallax-container relative' id='resume'>
+<section class={sectionClass} id='resume'>
   <div
     class='md:w-[40em] blur-[300px] top-20 h-72 rounded-full bg-purple-800 absolute pointer-events-none select-none left-20'
   >
