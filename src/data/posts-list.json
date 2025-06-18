@@ -1,5 +1,30 @@
 [
   {
+    "title": "El Síndrome del “Todo con IA”: ¿Innovación o Fiebre del Oro?",
+    "date": "June 18, 2025",
+    "tags": [
+      "automation",
+      "chatgpt",
+      "claude",
+      "ai"
+    ],
+    "link": "https://blog.nicomasnovo.com/el-s%C3%ADndrome-del-todo-con-ia-innovaci%C3%B3n-o-fiebre-del-oro-72559f469a4e",
+    "content": "Últimamente, pareciera que si una solución no tiene “IA” en su descripción, simplemente no vale la pena construirla. Y ojo, no estoy en contra de la i...",
+    "image": "/posts/images/el-s%C3%ADndrome-del-todo-con-ia-innovaci%C3%B3n-o-fiebre-del-oro-72559f469a4e.jpg"
+  },
+  {
+    "title": "Tus equipos son “Elite” en DORA, pero los objetivos de Negocio no se cumplen.",
+    "date": "June 9, 2025",
+    "tags": [
+      "dora",
+      "eficiencia",
+      "innovation"
+    ],
+    "link": "https://blog.nicomasnovo.com/tus-equipos-son-elite-en-dora-pero-los-objetivos-de-negocio-no-se-cumplen-6e303f75f673",
+    "content": "Antes de iniciar con este posteo pongámonos en línea con lo básico: las DORA Metrics (DevOps Research and Assessment) son un conjunto de métricas clav...",
+    "image": "/posts/images/tus-equipos-son-elite-en-dora-pero-los-objetivos-de-negocio-no-se-cumplen-6e303f75f673.jpg"
+  },
+  {
     "title": "Story Points: La Métrica que Está Frenando a tu Empresa",
     "date": "April 28, 2025",
     "tags": [
@@ -100,30 +125,5 @@
     "link": "https://blog.nicomasnovo.com/la-cultura-del-feedback-construyendo-v%C3%ADnculos-de-confianza-en-las-organizaciones-658823b55f3d",
     "content": "La Cultura del Feedback: construyendo vínculos de confianza en las Organizaciones En toda organización moderna hay un elemento clave que suele pasar d...",
     "image": "/posts/images/la-cultura-del-feedback-construyendo-v%C3%ADnculos-de-confianza-en-las-organizaciones-658823b55f3d.jpeg"
-  },
-  {
-    "title": "La Desmotivación en Ingeniería de Software: Un Problema Silencioso",
-    "date": "February 3, 2025",
-    "tags": [
-      "tech-culture",
-      "programming",
-      "developer-life",
-      "software-development"
-    ],
-    "link": "https://blog.nicomasnovo.com/la-desmotivaci%C3%B3n-en-ingenier%C3%ADa-de-software-un-problema-silencioso-e3e336533c18",
-    "content": "¿Te pasó alguna vez de sentarte frente a la computadora y quedarte mirando el código sin ganas de hacer nada? ¿O tal vez empezaste el día con toda la ...",
-    "image": "/posts/images/la-desmotivaci%C3%B3n-en-ingenier%C3%ADa-de-software-un-problema-silencioso-e3e336533c18.jpeg"
-  },
-  {
-    "title": "El trabajo en equipo: Seamos sinceros, ¿qué tan importante es realmente?",
-    "date": "January 23, 2025",
-    "tags": [
-      "teamwork",
-      "team",
-      "burnout"
-    ],
-    "link": "https://blog.nicomasnovo.com/el-trabajo-en-equipo-seamos-sinceros-qu%C3%A9-tan-importante-es-realmente-1c7166c5002b",
-    "content": "Últimamente todo el mundo habla del trabajo en equipo como si fuera la octava maravilla del mundo. Y sí, está bueno y es necesario, pero seamos realis...",
-    "image": "/posts/images/el-trabajo-en-equipo-seamos-sinceros-qu%C3%A9-tan-importante-es-realmente-1c7166c5002b.jpeg"
   }
 ]
