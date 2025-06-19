@@ -18,7 +18,6 @@ const renderer = new THREE.WebGLRenderer({
   alpha: true
 })
 renderer.setSize(window.innerWidth, window.innerHeight)
-document.body.appendChild(renderer.domElement)
 
 const ambientLight = new THREE.AmbientLight(0x404040, 1)
 scene.add(ambientLight)
@@ -58,6 +57,7 @@ window.addEventListener('resize', () => {
 
   renderer.setSize(window.innerWidth, window.innerHeight)
 })
+
 let rotationXDirection = -0.001
 
 function animate() {

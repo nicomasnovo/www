@@ -83,92 +83,98 @@
 
 <script>
   //May be to much typing but I was practicing
-  interface BallElement extends HTMLElement {
-    offsetWidth: number
-    offsetHeight: number
-    style: CSSStyleDeclaration
-  }
-
-  const body: HTMLElement = document.body
-  const ball: BallElement = document.querySelector('.ball') as BallElement
-  const nameElement: HTMLElement | null = document.querySelector('#name')
-
-  /**
-   * Handles mouse movement to update ball position
-   * @param {MouseEvent} event - Mouse movement event
-   * @returns {void}
-   */
-  const handleMouseMove = (event: MouseEvent): void => {
-    const x: number = event.clientX
-    const y: number = event.clientY
-
-    ball.style.left = `${x - ball.offsetWidth / 2}px`
-    ball.style.top = `${y - ball.offsetHeight / 2}px`
-
-    ball.classList.add('visible')
-  }
-
-  /**
-   * Handles mouse enter on name element
-   * @returns {void}
-   */
-  const handleNameEnter = (): void => {
-    ball.classList.add('hover')
-  }
-
-  /**
-   * Handles mouse leave on name element
-   * @returns {void}
-   */
-  const handleNameLeave = (): void => {
-    ball.classList.remove('hover')
-  }
-
-  /**
-   * Positions the ball for mobile/small screen layouts
-   * @returns {void}
-   */
-  const setBallPositionForSmallScreens = (): void => {
-    ball.classList.add('mobile')
-  }
-
-  /**
-   * Removes mobile-specific positioning class
-   * @returns {void}
-   */
-  const removeMobileClass = (): void => {
-    ball.classList.remove('mobile')
-  }
-
-  /**
-   * Updates ball behavior based on viewport width
-   * Adds/removes event listeners and classes for mobile vs desktop
-   * @returns {void}
-   */
-  const updateBehavior = (): void => {
-    const viewportWidth: number = window.innerWidth
-    if (viewportWidth < 770) {
-      body.removeEventListener('mousemove', handleMouseMove)
-      nameElement?.removeEventListener('mouseenter', handleNameEnter)
-      nameElement?.removeEventListener('mouseleave', handleNameLeave)
-      setBallPositionForSmallScreens()
-    } else {
-      removeMobileClass()
-      body.addEventListener('mouseenter', (): void => {
-        ball.classList.toggle('visible')
-      })
-
-      body.addEventListener('mouseleave', (): void => {
-        ball.classList.remove('visible')
-      })
-      body.addEventListener('mousemove', handleMouseMove)
-
-      nameElement?.addEventListener('mouseenter', handleNameEnter)
-      nameElement?.addEventListener('mouseleave', handleNameLeave)
+  function init() {
+    interface BallElement extends HTMLElement {
+      offsetWidth: number
+      offsetHeight: number
+      style: CSSStyleDeclaration
     }
+
+    const body: HTMLElement = document.body
+    const ball: BallElement = document.querySelector('.ball') as BallElement
+    const nameElement: HTMLElement | null = document.querySelector('#name')
+
+    /**
+     * Handles mouse movement to update ball position
+     * @param {MouseEvent} event - Mouse movement event
+     * @returns {void}
+     */
+    const handleMouseMove = (event: MouseEvent): void => {
+      const x: number = event.clientX
+      const y: number = event.clientY
+
+      ball.style.left = `${x - ball.offsetWidth / 2}px`
+      ball.style.top = `${y - ball.offsetHeight / 2}px`
+
+      ball.classList.add('visible')
+    }
+
+    /**
+     * Handles mouse enter on name element
+     * @returns {void}
+     */
+    const handleNameEnter = (): void => {
+      ball.classList.add('hover')
+    }
+
+    /**
+     * Handles mouse leave on name element
+     * @returns {void}
+     */
+    const handleNameLeave = (): void => {
+      ball.classList.remove('hover')
+    }
+
+    /**
+     * Positions the ball for mobile/small screen layouts
+     * @returns {void}
+     */
+    const setBallPositionForSmallScreens = (): void => {
+      ball.classList.add('mobile')
+    }
+
+    /**
+     * Removes mobile-specific positioning class
+     * @returns {void}
+     */
+    const removeMobileClass = (): void => {
+      ball.classList.remove('mobile')
+    }
+
+    /**
+     * Updates ball behavior based on viewport width
+     * Adds/removes event listeners and classes for mobile vs desktop
+     * @returns {void}
+     */
+    const updateBehavior = (): void => {
+      const viewportWidth: number = window.innerWidth
+      if (viewportWidth < 770) {
+        body.removeEventListener('mousemove', handleMouseMove)
+        nameElement?.removeEventListener('mouseenter', handleNameEnter)
+        nameElement?.removeEventListener('mouseleave', handleNameLeave)
+        setBallPositionForSmallScreens()
+      } else {
+        removeMobileClass()
+        body.addEventListener('mouseenter', (): void => {
+          ball.classList.toggle('visible')
+        })
+
+        body.addEventListener('mouseleave', (): void => {
+          ball.classList.remove('visible')
+        })
+        body.addEventListener('mousemove', handleMouseMove)
+
+        nameElement?.addEventListener('mouseenter', handleNameEnter)
+        nameElement?.addEventListener('mouseleave', handleNameLeave)
+      }
+    }
+
+    window.addEventListener('resize', updateBehavior)
+
+    updateBehavior()
   }
 
-  window.addEventListener('resize', updateBehavior)
-
-  updateBehavior()
+  document.addEventListener('astro:page-load', (e) => {
+    init()
+  })
 </script>

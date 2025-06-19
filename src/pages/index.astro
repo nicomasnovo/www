@@ -8,6 +8,7 @@ import Description from '@/components/Description.astro'
 import GHContributions from '@/components/GHContributions.astro'
 import Medium from '@/components/Medium/index.astro'
 import { getThemeClass } from '@/utils/theme'
+import Astronauts from '@/components/Astronauts.astro'
 
 const colors = [
   'from-[#2e409a] to-[#050133]',
@@ -16,20 +17,28 @@ const colors = [
   'from-[#7e3a63] to-[#050133]',
   'from-[#2a5554] to-[#06070c]',
   'from-[#5a0715] to-[#240b36]',
-  'from-[#780206] to-[#061161]'
+  'from-[#440104] to-[#061161]'
 ]
+// const base =
+//   'lg:pt-14 px-8 text-gray-900 text-white bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] min-h-dvh grid items-center justify-center pixelin'
 const base =
-  'lg:pt-14 px-8 text-gray-900 text-white bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] min-h-dvh grid items-center justify-center pixelin'
+  'text-gray-900 text-white bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] min-h-dvh relative'
 
 const sectionClass = getThemeClass({ colors, base })
 ---
 
 <Layout>
   <section class={sectionClass} id='start'>
-    <div class='max-w-3xl pt-16 pb-12 md:px-8 z-10 relative'>
-      <Name />
+    <canvas
+      id='letter-canvas'
+      class='m-auto z-10 absolute width: 100vw; height: 100vh;'></canvas>
+
+    <script src='../lib/threejs/mix.js'></script>
+    <!--<div class='max-w-3xl pt-16 pb-12 md:px-8 z-10 relative'>
+       <Name />
       <Description />
-    </div>
+    </div>-->
+    <Astronauts />
   </section>
   <Resume />
   <Medium />

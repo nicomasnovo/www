@@ -10,7 +10,7 @@ const colors = [
   'from-[#7e3a63] to-[#050133]',
   'from-[#2a5554] to-[#06070c]',
   'from-[#5a0715] to-[#240b36]',
-  'from-[#780206] to-[#061161]'
+  'from-[#440104] to-[#061161]'
 ]
 const base =
   'px-4 py-20 mb-12 text-gray-200 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))]'
@@ -19,7 +19,6 @@ const sectionClass = getThemeClass({ colors, base })
 
 const posts = await getPosts()
 const showViewMore = posts.length > 5
-//from-[#3e2e9a] to-[#2b1150]
 ---
 
 <section id='medium' class={sectionClass}>
