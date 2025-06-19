@@ -1,0 +1,121 @@
+---
+const { pathname } = Astro.url
+---
+
+<h2
+  class='text-2xl md:text-4xl font-bold md:font-semibold type bg-black bg-opacity-25 py-2 pl-6 pr-4 md:pl-4 rounded-xl'
+>
+  <span></span>
+</h2>
+
+<style>
+  .type {
+    opacity: 0;
+    display: inline-block;
+    position: relative;
+    &::after {
+      content: '|';
+      animation: blink 1.5s steps(1) infinite;
+      color: white;
+      font-weight: bold;
+      margin-left: -5px;
+      margin-top: -3px;
+    }
+  }
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+</style>
+
+<script define:vars={{ pathname }}>
+  const strings = [
+    'Software Engineer',
+    'APIcultor',
+    'Technical Lead',
+    'Milanesas Evangelist',
+    'Fullstack Developer',
+    'Things Specialist',
+    'Software Engineer Manager',
+    'Programador',
+    'Nerd'
+  ]
+
+  const typingSpeed = 100
+  const pauseBetween = 1000
+  const displayElement = document.querySelector('.type span')
+
+  let stringIndex = 0
+  let charIndex = 0
+  let isDeleting = false
+
+  /**
+   * Types text with animation effect
+   * @returns {void}
+   */
+  const typeEffect = () => {
+    if (!displayElement) return
+    const currentString = strings[stringIndex]
+    let speed = isDeleting
+      ? calculateDeletingSpeed(charIndex, currentString.length)
+      : typingSpeed
+
+    if (!isDeleting) {
+      displayElement.textContent = currentString.slice(0, charIndex + 1)
+      charIndex++
+
+      if (charIndex === currentString.length) {
+        isDeleting = true
+        setTimeout(typeEffect, pauseBetween)
+        return
+      }
+    } else {
+      displayElement.textContent = currentString.slice(0, charIndex - 1)
+      charIndex--
+
+      if (charIndex === 0) {
+        isDeleting = false
+        stringIndex = (stringIndex + 1) % strings.length
+        displayElement.textContent = ''
+        setTimeout(typeEffect, pauseBetween)
+        return
+      }
+    }
+
+    setTimeout(typeEffect, speed)
+  }
+
+  /**
+   * Calculates the deleteing speed after typing
+   * @returns {void}
+   */
+  const calculateDeletingSpeed = (currentChar, totalChars) => {
+    const progress = 1 - currentChar / totalChars
+    return Math.max(30, progress * 100)
+  }
+
+  /**
+   * Init typing animation
+   * @returns {void}
+   */
+  const startAnimation = () => {
+    if (!document.querySelector('.type')) return
+    setTimeout(() => {
+      document.querySelector('.type').style.opacity = '1'
+    }, 1000)
+    setTimeout(typeEffect, 3000)
+  }
+
+  document.addEventListener('astro:page-load', (e) => {
+    if (pathname !== '/resources') {
+      startAnimation()
+    }
+  })
+</script>
