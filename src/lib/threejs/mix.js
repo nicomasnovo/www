@@ -5,7 +5,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 function init() {
   const colorByDay = () => {
     const day = new Date().getDay()
-    //   const day = _day
+    // const day = _day
     const colors = [
       0x2e409a, 0x2c5364, 0x621e19, 0x7e3a63, 0x2a5554, 0x5a0715, 0x780206
     ]
@@ -60,6 +60,7 @@ function init() {
     const cameraDistance = Math.max(size.x, size.y, size.z) * 1.5
     camera.position.set(0, size.y * 2.5, cameraDistance)
   })
+
   function createSpotLight(color, position, angle, penumbra) {
     const light = new THREE.SpotLight(color, 100)
     light.position.set(...position)
@@ -107,6 +108,15 @@ function init() {
   const starField = new THREE.Points(starGeometry, starMaterial)
   scene.add(starField)
 
+  let particleLight = new THREE.Mesh(
+    new THREE.SphereGeometry(0, 8, 8),
+    new THREE.MeshBasicMaterial({ color: 0xcc0000 })
+  )
+
+  scene.add(particleLight)
+
+  particleLight.add(new THREE.PointLight(0x8c34eb, 30))
+
   let rotationXDirection = -0.001
 
   window.addEventListener('resize', () => {
@@ -114,6 +124,9 @@ function init() {
     camera.updateProjectionMatrix()
     renderer.setSize(window.innerWidth, window.innerHeight)
   })
+
+  const orbitRadius = 4
+  const orbitSpeed = 3
 
   function animate() {
     requestAnimationFrame(animate)
@@ -126,6 +139,19 @@ function init() {
       model.rotation.x += rotationXDirection
       if (model.rotation.x <= -1) rotationXDirection = 0.001
       else if (model.rotation.x >= 0) rotationXDirection = -0.001
+
+      const time = performance.now() / 1000
+
+      const angle = time * orbitSpeed
+      const x = Math.cos(angle) * orbitRadius
+      const z = Math.sin(angle) * orbitRadius
+      const y = Math.sin(angle * 0.5) * 2 + 2
+
+      particleLight.position.set(
+        model.position.x + x,
+        model.position.y + y,
+        model.position.z + z
+      )
     }
 
     renderer.render(scene, camera)
